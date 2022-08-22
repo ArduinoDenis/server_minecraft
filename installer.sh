@@ -10,8 +10,7 @@ sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.2_8.tar.gz;
 sudo cp start.sh minecraft/
 cd minecraft/
 sudo chmod 777 *;
-wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/267/downloads/paper-1.18.2-267.jar
-mv paper-1.18.2-267.jar server.jar
+wget https://piston-data.mojang.com/v1/objects/f69c284232d7c7580bd89a5a4931c3581eae1378/server.jar
 chmod 777 *
 sudo apt-get update && sudo apt-get upgrade -y;
 sudo add-apt-repository ppa:linuxuprising/java -y;
