@@ -11,7 +11,7 @@ sudo cp start.sh minecraft/
 cd minecraft/
 sudo chmod 777 *;
 wget https://download.getbukkit.org/spigot/spigot-1.19.2.jar
-chmod 777 *
+sudo chmod 777 *
 sudo apt-get update && sudo apt-get upgrade -y;
 sudo add-apt-repository ppa:linuxuprising/java -y;
 sudo apt-get install oracle-java17-installer oracle-java17-set-default -y
