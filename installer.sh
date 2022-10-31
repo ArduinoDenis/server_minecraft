@@ -4,9 +4,9 @@ sudo apt-get install default-jdk -y ;
 javac -version;
 mkdir minecraft;
 sudo chmod 777 minecraft/;
-wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4.1%2B1/OpenJDK17U-jdk_x64_linux_hotspot_17.0.4.1_1.tar.gz;
-tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.4.1_1.tar.gz;
-sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.4.1_1.tar.gz;
+wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.5%2B8/OpenJDK17U-jdk_x64_linux_hotspot_17.0.5_8.tar.gz;
+tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.5_8.tar.gz;
+sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.5_8.tar.gz;
 sudo cp start.sh minecraft/
 cd minecraft/
 sudo chmod 777 *;
