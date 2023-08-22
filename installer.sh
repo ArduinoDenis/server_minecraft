@@ -4,13 +4,13 @@ sudo apt-get install default-jdk -y ;
 javac -version;
 mkdir minecraft;
 sudo chmod 777 minecraft/;
-wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jdk_x64_linux_hotspot_17.0.6_10.tar.gz;
-tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.6_10.tar.gz;
-sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.6_10.tar.gz;
+wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz;
+tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz;
+sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz;
 sudo cp start.sh minecraft/
 cd minecraft/
 sudo chmod 777 *;
-wget https://download.getbukkit.org/spigot/spigot-1.19.3.jar
+wget https://download.getbukkit.org/spigot/spigot-1.20.1.jar
 sudo chmod 777 *
 sudo apt-get update && sudo apt-get upgrade -y;
 sudo add-apt-repository ppa:linuxuprising/java -y;
