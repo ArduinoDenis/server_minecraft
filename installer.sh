@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Copia il file per Minecraft
-sudo cp file_per_minecraft.sh ..
-
-# Imposta i permessi per il file per Minecraft
-sudo chmod 777 file_per_minecraft.sh
-
 # Imposta i permessi per la directory del server Minecraft
 sudo chmod 777 server_minecraft/
 
@@ -27,12 +21,12 @@ javac -version
 mkdir minecraft
 cd minecraft/
 sudo chmod 777 ..
-sudo wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.8%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz
-sudo tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz
-sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.8_7.tar.gz
+sudo wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.10%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.10_7.tar.gz
+sudo tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.10_7.tar.gz
+sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.10_7.tar.gz
 sudo cp ../start.sh .
 sudo chmod 777 *
-sudo wget https://download.getbukkit.org/spigot/spigot-1.20.1.jar
+sudo wget https://download.getbukkit.org/spigot/spigot-1.20.4.jar
 sudo chmod 777 *
 cd ..
 
