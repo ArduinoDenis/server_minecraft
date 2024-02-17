@@ -1,29 +1,47 @@
-# server_minecraft
-oggi vediamo come creare un server Minecraft su linux
-<h1>1 passaggio</h1>
+
+# Guida per creare un server Minecraft Spigot su Linux
+
+Oggi vedremo come creare un server Minecraft utilizzando Spigot su Linux.
+
+## Passaggio 1
+
+Clonare il repository:
 
 ```bash
 git clone https://github.com/ArduinoDenis/server_minecraft.git
 ```
-<h1>2 passaggio</h1>
+
+## Passaggio 2
+
+Entrare nella directory appena clonata:
 
 ```bash
 cd server_minecraft/
 ```
-<h1>3 passaggio</h1>
+
+## Passaggio 3
+
+Dare i permessi di esecuzione allo script:
 
 ```bash
 sudo chmod 777 file_per_minecraft.sh
 ```
-<h1>4 passaggio</h1>
+
+## Passaggio 4
+
+Eseguire lo script:
 
 ```bash
 ./file_per_minecraft.sh
 ```
-<h2>aspettare che finisce la procedura</h2>
-dopo un po di tempo vi appare una schermata dove dovete fare si e poi accetto
-poi verso la fine vi appare una pagina di configurazione e poi fate ctrl+o
-poi fate ctrl+x
-ed infine aspettate che vi crea il server minecraft
-<h3>fine.</h3>
-Buon divertimento e buon gameplay
+
+Aspettare che la procedura termini. Durante l'installazione, verrà richiesto di accettare alcune condizioni e, alla fine, si aprirà una pagina di configurazione. Utilizzare Ctrl+O per salvare e Ctrl+X per uscire.
+
+Infine, attendere che il server Minecraft venga creato.
+
+### Fine
+
+Buon divertimento e buon gameplay!
+```
+
+Questo README.md fornisce istruzioni chiare e concise su come creare un server Minecraft utilizzando lo script fornito.
