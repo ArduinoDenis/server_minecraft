@@ -2,7 +2,7 @@
 
 ## Documentation
 
-For further information and detailed documentation, please refer to the [Documentation](https://docs.arduinodenis.com/github/diverse-coding-projects/diverse-coding-projects/server-minecraft).
+For further information and detailed documentation, please refer to the [Documentation](https://docs.arduinodenis.it/github/diverse-coding-projects/diverse-coding-projects/server-minecraft).
 
 ## License
 
