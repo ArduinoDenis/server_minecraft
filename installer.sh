@@ -1,60 +1,38 @@
 #!/bin/bash
 
-# Imposta i permessi per la directory del server Minecraft
-sudo chmod 777 server_minecraft/
+set -e
 
-# Entra nella directory del server Minecraft
-cd server_minecraft/
+MINECRAFT_DIR="server_minecraft"
+JAVA_DIR="minecraft"
 
-# Imposta i permessi per tutti i file nella directory del server Minecraft
-sudo chmod 777 *
+# Crea e entra nella directory del server
+mkdir -p "$MINECRAFT_DIR"
+cd "$MINECRAFT_DIR"
 
-# Installazione di Java Runtime Environment
-sudo apt-get install default-jre -y
-java -version
-
-# Installazione di Java Development Kit
-sudo apt-get install default-jdk -y
-javac -version
-
-# Creazione della directory "minecraft" e scaricamento di JDK 17
-mkdir minecraft
-cd minecraft/
-sudo chmod 777 ..
-sudo wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
-sudo tar -xvf OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
-sudo rm -rf OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
-sudo cp ../start.sh .
-sudo chmod 777 *
-sudo wget https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/131/downloads/paper-1.21.1-131.jar
-sudo chmod 777 *
-cd ..
-
-# Aggiornamento del sistema
+# Aggiorna il sistema
 sudo apt-get update && sudo apt-get upgrade -y
 
-# Aggiunta del repository Java
-sudo add-apt-repository ppa:linuxuprising/java -y
+# Installa Java JRE e JDK (versioni default)
+sudo apt-get install -y default-jre default-jdk
 
-# Installazione di Oracle Java 17
-sudo apt-get install oracle-java17-installer oracle-java17-set-default -y
+# Crea directory minecraft e scarica JDK 17
+mkdir -p "$JAVA_DIR"
+cd "$JAVA_DIR"
 
-# Entra nella directory del server Minecraft
-cd minecraft/
+# Scarica e installa OpenJDK 17
+wget -q https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.13%2B11/OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
+tar -xzf OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
+rm OpenJDK17U-jdk_x64_linux_hotspot_17.0.13_11.tar.gz
 
-# Esegui il file start.sh per avviare il server Minecraft
-./start.sh
+# Copia lo script di avvio
+cp ../start.sh .
 
-# Imposta il file "eula.txt" su true
-echo "___Impostazione di eula.txt su true___"
-nano eula.txt
+# Scarica PaperMC
+wget -q https://api.papermc.io/v2/projects/paper/versions/1.21.1/builds/131/downloads/paper-1.21.1-131.jar
 
-# Configura le impostazioni del server Minecraft
-echo "___Configurazione delle impostazioni del server Minecraft___"
-nano server.properties
+# Accetta automaticamente l'EULA
+echo "eula=true" > eula.txt
 
-# Imposta i permessi per tutti i file nella directory del server Minecraft
-sudo chmod 777 *
-
-# Avvia il server Minecraft
-bash start.sh
+echo "Installazione completata!"
+echo "Per avviare il server: cd $MINECRAFT_DIR/$JAVA_DIR && ./start.sh"
+echo "Per configurare il server modifica: server.properties"
